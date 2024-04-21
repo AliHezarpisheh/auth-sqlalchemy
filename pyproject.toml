@@ -40,6 +40,7 @@ lint.select = [
     "RUF",  # Ruff specific rules
 ]
 lint.ignore = ["D104"]
+lint.exclude = ["*/alembic/*"]
 
 lint.fixable = [
     "F401",  # Remove unused imports.
