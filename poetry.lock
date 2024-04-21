@@ -766,6 +766,17 @@ files = [
 ]
 
 [[package]]
+name = "tomlkit"
+version = "0.12.4"
+description = "Style preserving TOML library"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "tomlkit-0.12.4-py3-none-any.whl", hash = "sha256:5cd82d48a3dd89dee1f9d64420aa20ae65cfbd00668d6f094d7578a78efbb77b"},
+    {file = "tomlkit-0.12.4.tar.gz", hash = "sha256:7ca1cfc12232806517a8515047ba66a19369e71edf2439d0f5824f91032b6cc3"},
+]
+
+[[package]]
 name = "typing-extensions"
 version = "4.11.0"
 description = "Backported and Experimental Type Hints for Python 3.8+"
@@ -799,4 +810,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "400f6a356c0a2ce2f4d097cff6c1ecfb98e1eb459fff6c012ad875743ef737fe"
+content-hash = "429382139324fcffc78f85f0b2efecdc1848b14afa76fc7956984ff3560e6e5f"

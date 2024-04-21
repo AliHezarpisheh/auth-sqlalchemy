@@ -18,6 +18,7 @@ pytest-randomly = "^3.15.0"
 pytest-cov = "^5.0.0"
 sqlalchemy = "^2.0.29"
 alembic = "^1.13.1"
+tomlkit = "^0.12.4"
 
 
 [build-system]
