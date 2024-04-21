@@ -1,8 +1,8 @@
 """
-Configuration Utility Functions.
+Logging configuration Utility Functions.
 
-This module contains utility functions to facilitate the configuration processes in the
-project. The functions provided here are designed to assist in various aspects of
+This module contains utility functions to facilitate the logging configuration processes
+in the project. The functions provided here are designed to assist in various aspects of
 configuration, enhancing the flexibility and maintainability of the project settings.
 
 Usage
