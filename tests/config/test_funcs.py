@@ -6,7 +6,7 @@ from typing import Any, Generator
 
 import pytest
 
-from config.helper.funcs import read_toml, validate_and_create_dirs
+from config.logging.helper.funcs import read_toml, validate_and_create_dirs
 
 
 @pytest.fixture
