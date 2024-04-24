@@ -1,8 +1,8 @@
 """
-Configuration Utility Functions.
+Logging configuration Utility Functions.
 
-This module contains utility functions to facilitate the configuration processes in the
-project. The functions provided here are designed to assist in various aspects of
+This module contains utility functions to facilitate the logging configuration processes
+in the project. The functions provided here are designed to assist in various aspects of
 configuration, enhancing the flexibility and maintainability of the project settings.
 
 Usage
@@ -24,7 +24,7 @@ from typing import Any
 import tomlkit
 
 
-def read_toml(path: Path) -> dict[str, Any]:
+def read_toml(path: Path) -> Any:
     """
     Read a TOML file and return its content as a dictionary.
 
@@ -35,7 +35,7 @@ def read_toml(path: Path) -> dict[str, Any]:
 
     Returns
     -------
-    dict
+    Any
         The parsed content of the TOML file.
     """
     try:

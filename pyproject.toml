@@ -17,7 +17,9 @@ pytest-sugar = "^1.0.0"
 pytest-randomly = "^3.15.0"
 pytest-cov = "^5.0.0"
 sqlalchemy = "^2.0.29"
+tomlkit = "^0.12.4"
 alembic = "^1.13.1"
+psycopg2-binary = "^2.9.9"
 
 
 [build-system]
@@ -38,6 +40,7 @@ lint.select = [
     "RUF",  # Ruff specific rules
 ]
 lint.ignore = ["D104"]
+lint.exclude = ["*/alembic/*"]
 
 lint.fixable = [
     "F401",  # Remove unused imports.
