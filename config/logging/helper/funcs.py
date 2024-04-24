@@ -24,7 +24,7 @@ from typing import Any
 import tomlkit
 
 
-def read_toml(path: Path) -> dict[str, Any]:
+def read_toml(path: Path) -> Any:
     """
     Read a TOML file and return its content as a dictionary.
 
@@ -35,7 +35,7 @@ def read_toml(path: Path) -> dict[str, Any]:
 
     Returns
     -------
-    dict
+    Any
         The parsed content of the TOML file.
     """
     try:
