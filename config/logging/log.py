@@ -18,7 +18,7 @@ import logging.config
 import logging.handlers
 from pathlib import Path
 
-from ..helper.funcs import read_toml, validate_and_create_dirs
+from .helper.funcs import read_toml, validate_and_create_dirs
 
 
 def setup_logging(logging_config_path: Path) -> None:
