@@ -19,30 +19,30 @@ class User(Base, CommonMixin):
     last_login: Mapped[datetime] = mapped_column(nullable=True)
     date_joined: Mapped[datetime] = mapped_column(default=datetime.now(timezone.utc))
 
-    # def __str__(self) -> str:
-    #     """
-    #     Return a human-readable string representation of the user.
+    def __str__(self) -> str:
+        """
+        Return a human-readable string representation of the user.
 
-    #     Returns
-    #     -------
-    #     str
-    #         A string containing username, last login, and date joined.
-    #     """
-    #     return (
-    #         f"<User(username={self.username}, last_login={self.last_login}, "
-    #         f"date_joined={self.date_joined})>"
-    #     )
+        Returns
+        -------
+        str
+            A string containing username, last login, and date joined.
+        """
+        return (
+            f"<User(username={self.username}, last_login={self.last_login}, "
+            f"date_joined={self.date_joined})>"
+        )
 
-    # def __repr__(self) -> str:
-    #     """
-    #     Return an unambiguous string representation of the user.
+    def __repr__(self) -> str:
+        """
+        Return an unambiguous string representation of the user.
 
-    #     Returns
-    #     -------
-    #     str
-    #         A string containing the class name and attribute values.
-    #     """
-    #     return (
-    #         f"User(username={self.username}, last_login={self.last_login}, "
-    #         f"date_joined={self.date_joined})"
-    #     )
+        Returns
+        -------
+        str
+            A string containing the class name and attribute values.
+        """
+        return (
+            f"User(username={self.username}, last_login={self.last_login}, "
+            f"date_joined={self.date_joined})"
+        )
