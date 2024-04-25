@@ -20,6 +20,7 @@ sqlalchemy = "^2.0.29"
 tomlkit = "^0.12.4"
 alembic = "^1.13.1"
 psycopg2-binary = "^2.9.9"
+inquirer = "^3.2.4"
 
 
 [build-system]
@@ -94,4 +95,3 @@ source = [
     "toolkit",
     "src",
 ]
-

@@ -59,5 +59,5 @@ class DatabaseConnection:
             A scoped session object.
         """
         engine = self.get_engine()
-        session = sessionmaker(bind=engine)
-        return scoped_session(session)
+        Session = sessionmaker(bind=engine)
+        return scoped_session(Session)
