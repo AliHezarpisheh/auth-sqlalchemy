@@ -23,5 +23,5 @@ class MenuView:
             ),
         ]
         answers = inquirer.prompt(questions)
-        command = answers["command"][0]
+        command: str = answers["command"][0]
         return command

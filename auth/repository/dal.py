@@ -11,11 +11,14 @@ in the database. It utilizes SQLAlchemy for database interaction and integrates 
 application's user model to ensure consistency and data integrity.
 """
 
+import logging
 from typing import Optional
 
 from config.base import db
 
 from ..models import User
+
+logger = logging.getLogger(__name__)
 
 
 class UserDataAccessLayer:
@@ -38,6 +41,8 @@ class UserDataAccessLayer:
         Optional[User]
             The user object if found, otherwise ``None``.
         """
+        logger.info(f"Retrieving user by username: {username}")
+
         user: Optional[User] = (
             self.session.query(User).filter_by(username=username).scalar()
         )

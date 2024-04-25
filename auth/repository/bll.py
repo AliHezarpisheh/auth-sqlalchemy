@@ -11,12 +11,16 @@ ensuring data integrity and enforcing business rules during user creation. It ut
 SQLAlchemy for database interaction and integrates with the application's user model.
 """
 
+import logging
+
 from sqlalchemy.exc import IntegrityError
 
 from auth.models import User
 from config.base import db
 
 from ..helpers.exceptions import UserAlreadyExistsError
+
+logger = logging.getLogger(__name__)
 
 
 class UserBusinessLogicLayer:
@@ -43,15 +47,18 @@ class UserBusinessLogicLayer:
         UserAlreadyExistsError
             If the username already exists in the database.
         """
+        logger.info(f"Creating user with username: {username}")
+
         user = User(username=username, password=password)
         session = db.get_session()
         with session.begin():
             try:
                 session.add(user)
                 session.commit()
+                logger.info(f"User {username} created successfully.")
             except IntegrityError as err:
                 session.rollback()
-                raise UserAlreadyExistsError(
-                    f"User {username} Already Registered."
-                ) from err
+                error_message = f"User {username} Already Registered."
+                logger.error(error_message)
+                raise UserAlreadyExistsError(error_message) from err
         return user

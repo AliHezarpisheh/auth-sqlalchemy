@@ -1,1 +1,1 @@
-from .menu import MenuView
+from .menu import MenuView as MenuView

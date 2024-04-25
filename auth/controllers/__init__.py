@@ -1,1 +1,1 @@
-from .user import UserController
+from .user import UserController as UserController

@@ -1,1 +1,1 @@
-from .service import UserService
+from .service import UserService as UserService

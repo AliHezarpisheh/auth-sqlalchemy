@@ -1,9 +1,13 @@
 """Main module for handling user interactions with the application."""
 
+import logging
+
 from auth.controllers import UserController
 
 from .commands.enums import Menu
 from .views import MenuView
+
+logger = logging.getLogger(__name__)
 
 
 class Main:
@@ -20,10 +24,12 @@ class Main:
 
         Displays a welcome message, gets user input, and executes corresponding actions.
         """
+        logger.info("Starting the application.")
         self.user_controller.show_welcome_msg()
 
         while True:
             command = self.menu_view.get_command()
+            logger.info("User selected %s option.", command)
 
             if command == Menu.LOGIN:
                 self.user_controller.login()
