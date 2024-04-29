@@ -21,6 +21,7 @@ tomlkit = "^0.12.4"
 alembic = "^1.13.1"
 psycopg2-binary = "^2.9.9"
 inquirer = "^3.2.4"
+tox = "^4.15.0"
 
 
 [build-system]
@@ -92,6 +93,5 @@ xfail_strict = true
 parallel = true
 source = [
     "config",
-    "toolkit",
-    "src",
+    "auth",
 ]
