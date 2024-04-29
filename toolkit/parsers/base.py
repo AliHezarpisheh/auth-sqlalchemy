@@ -17,7 +17,7 @@ class Parser(ABC):
         file_path : str
             The path to the file to be parsed.
         """
-        self._file_path = Path(file_path)
+        self.file_path = Path(file_path)
 
     @abstractmethod
     def read(self) -> Any:
