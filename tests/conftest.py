@@ -3,9 +3,11 @@
 from typing import Generator
 
 import pytest
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session, scoped_session, sessionmaker
+
+from config.database.orm import Base
 
 
 def pytest_addoption(parser: pytest.Parser) -> None:
@@ -62,8 +64,12 @@ def db_engine(db_url: str) -> Generator[Engine, None, None]:
     Generator[Engine, None, None]
         A generator yielding the SQLAlchemy engine instance.
     """
-    engine = create_engine(db_url, echo=True)
+    engine = create_engine(db_url)
+
+    Base.metadata.create_all(bind=engine)
     yield engine
+    Base.metadata.drop_all(bind=engine)
+
     engine.dispose()
 
 
@@ -105,4 +111,11 @@ def db_session(
     session = db_session_factory()
     yield session
     session.rollback()
+
+    # Truncate all tables after each test function.
+    for table in reversed(Base.metadata.sorted_tables):
+        stmt = text(f"TRUNCATE {table.name} CASCADE;")
+        session.execute(stmt)
+        session.commit()
+
     session.close()
