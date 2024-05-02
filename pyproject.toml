@@ -67,6 +67,8 @@ include_trailing_comma = true
 strict = true
 ignore_missing_imports = true
 
+exclude = "tests/"
+
 
 [tool.pytest.ini_options]
 addopts = [
