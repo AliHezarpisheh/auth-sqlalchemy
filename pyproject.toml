@@ -42,7 +42,7 @@ lint.select = [
     "I",  # isort
     "RUF",  # Ruff specific rules
 ]
-lint.ignore = ["D104"]
+lint.ignore = ["D"]
 lint.exclude = ["*/alembic/*"]
 
 lint.fixable = [
