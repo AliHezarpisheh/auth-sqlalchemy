@@ -1,6 +1,11 @@
 ## Overview
 This project is an authentication Command Line Interface (CLI) application built using SQLAlchemy to abstract the database operations and PostgreSQL as the underlying database management system. It utilizes Alembic for database migration management and follows the Model-View-Controller (MVC) architectural pattern for structuring the codebase.
 
+[![Coverage Status](https://img.shields.io/badge/coverage-100%25-brightgreen)](COVERAGE_URL)
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue)](https://www.python.org/downloads/release/python-312/)
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/downloads/release/python-311/)
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue)](https://www.python.org/downloads/release/python-310/)
+
 ## Installation Guide
 
 ### Prerequisites
