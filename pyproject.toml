@@ -21,6 +21,8 @@ tomlkit = "^0.12.4"
 alembic = "^1.13.1"
 psycopg2-binary = "^2.9.9"
 inquirer = "^3.2.4"
+tox = "^4.15.0"
+pytest-repeat = "^0.9.3"
 
 
 [build-system]
@@ -65,6 +67,8 @@ include_trailing_comma = true
 strict = true
 ignore_missing_imports = true
 
+exclude = "tests/"
+
 
 [tool.pytest.ini_options]
 addopts = [
@@ -91,7 +95,6 @@ xfail_strict = true
 [tool.coverage.run]
 parallel = true
 source = [
-    "config",
+    "auth",
     "toolkit",
-    "src",
 ]
